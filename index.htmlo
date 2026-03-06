@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chúc mừng 8/3</title>
+
+<style>
+body{
+margin:0;
+background:black;
+overflow:hidden;
+font-family:Arial;
+color:#ff77aa;
+}
+
+.text{
+position:absolute;
+white-space:nowrap;
+font-size:28px;
+animation: move 10s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translateX(100vw);}
+100%{transform:translateX(-100vw);}
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation: fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh);}
+100%{transform:translateY(110vh);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="text" style="top:20%">Chúc các chị em CLB luôn xinh đẹp 🌸</div>
+<div class="text" style="top:40%">Chúc một ngày 8/3 thật nhiều niềm vui 💐</div>
+<div class="text" style="top:60%">Luôn tự tin – tỏa sáng – thành công ✨</div>
+<div class="text" style="top:80%">Cảm ơn vì đã làm CLB rực rỡ hơn ❤️</div>
+
+<script>
+for(let i=0;i<30;i++){
+let heart=document.createElement("div");
+heart.innerHTML="❤";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
